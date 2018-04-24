@@ -1,0 +1,269 @@
+﻿@model BatchViewModel
+
+<div class="row">
+    <div class="col-md-3">
+        @await Component.InvokeAsync("NavBatch")
+        <label>Start Time:</label>
+        <input id="startTime" name="startTime" type="text" value="@DateTime.Today.AddMonths(-6).ToShortDateString()" />
+        <label>End Time:</label>
+        <input id="endTime" name="endTime" type="text" value="@DateTime.Today.ToShortDateString()" />
+    </div>
+    <div class="col-md-9">
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        ModifiedUserId
+                    </th>
+                    <th>
+                        ModifiedDateTime
+                    </th>
+                    <th>
+                        MarketId
+                    </th>
+                    <th>
+                        ScheduleId
+                    </th>
+                    <th>
+                        BatchStatusId
+                    </th>
+                    <th>
+                        FileName
+                    </th>
+                    <th>
+                        FilePath
+                    </th>
+                    <th>
+                        RangeStartDOS
+                    </th>
+                    <th>
+                        RangeEndDOS
+                    </th>
+                    <th>
+                        StartDate
+                    </th>
+                    <th>
+                        EndDate
+                    </th>
+                    <th>
+                        StagingStartDate
+                    </th>
+                    <th>
+                        StagingEndDate
+                    </th>
+                    <th>
+                        BusinessUpdateStartDate
+                    </th>
+                    <th>
+                        BusinessUpdateEndDate
+                    </th>
+                    <th>
+                        ScrubStartDate
+                    </th>
+                    <th>
+                        ScrubEndDate
+                    </th>
+                    <th>
+                        StagingClaimCount
+                    </th>
+                    <th>
+                        ProcessedClaimCount
+                    </th>
+                    <th>
+                        ScrubClaimCount
+                    </th>
+                    <th>
+                        SubmittedClaimCount
+                    </th>
+                    <th>
+                        StagingErrorCount
+                    </th>
+                    <th>
+                        BusinessUpdateErrorCount
+                    </th>
+                    <th>
+                        ScrubErrorCount
+                    </th>
+                    <th>
+                        FileGenerationErrorCount
+                    </th>
+                    <th>
+                        IsPreAdjudicated
+                    </th>
+                    <th>
+                        IsScrubEnabled
+                    </th>
+                    <th>
+                        PurgeDate
+                    </th>
+                    <th>
+                        BatchMessage
+                    </th>
+                    <th>
+                        IsFailed
+                    </th>
+                    <th>
+                        IsExportComplete
+                    </th>
+                    <th>
+                        StagingPartitionKey
+                    </th>
+                    <th>
+                        CachePartitionKey
+                    </th>
+                    <th>
+                        IsParsed
+                    </th>
+                    <th>
+                        ClmChargeAmt
+                    </th>
+                    <th>
+                        ClmPatPaidAmt
+                    </th>
+                    <th>
+                        ScrubbedClmChargeAmt
+                    </th>
+                    <th>
+                        ScrubbedClmPatPaidAmt
+                    </th>
+                    <th>
+                        BatchProcessTime
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Batches)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedUserId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedDateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MarketId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScheduleId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BatchStatusId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FileName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FilePath)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RangeStartDOS)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RangeEndDOS)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EndDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StagingStartDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StagingEndDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BusinessUpdateStartDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BusinessUpdateEndDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScrubStartDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScrubEndDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StagingClaimCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProcessedClaimCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScrubClaimCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubmittedClaimCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StagingErrorCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BusinessUpdateErrorCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScrubErrorCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FileGenerationErrorCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsPreAdjudicated)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsScrubEnabled)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PurgeDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BatchMessage)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsFailed)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsExportComplete)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StagingPartitionKey)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CachePartitionKey)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsParsed)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ClmChargeAmt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ClmPatPaidAmt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScrubbedClmChargeAmt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScrubbedClmPatPaidAmt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BatchProcessTime)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.BatchId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.BatchId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.BatchId">Delete</a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>
+</div>

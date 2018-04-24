@@ -1,0 +1,8 @@
+﻿@model IEnumerable<string>
+
+@foreach (string scheduleStatus in Model)
+{
+    <a class="btn btn-block
+       @(scheduleStatus==ViewBag.SelectedScheduleStatus? "btn-primary":"btn-default")"
+       asp-action="Index" asp-controller="PharmSchedules" asp-route-scheduleStatus="@scheduleStatus" asp-route-batchPage="1">@scheduleStatus</a>
+}

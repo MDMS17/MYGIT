@@ -1,0 +1,204 @@
+﻿@model PAHWebApp.Models.PharmResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PharmResponse</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUserId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BatchId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BatchId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BatchFileStatusId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BatchFileStatusId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FileCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FileCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FileName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FileName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FilePath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FilePath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FileCreateDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FileCreateDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaimCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClaimCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCharge)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalCharge)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPaid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalPaid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FileSubmissionMode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FileSubmissionMode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseFileId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResponseFileId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseFileTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResponseFileTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseFileLoadStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResponseFileLoadStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseFileLoadDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResponseFileLoadDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MarketId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MarketId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseFilePath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResponseFilePath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseFileName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResponseFileName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseFileStatusId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResponseFileStatusId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InterchangeSenderId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InterchangeSenderId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InterchangeDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InterchangeDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ErrorFilePath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ErrorFilePath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ErrorMessage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ErrorMessage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseFileSizeInMB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResponseFileSizeInMB)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPurge)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsPurge)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseMessage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResponseMessage)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BatchFileId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
+</body>
+</html>

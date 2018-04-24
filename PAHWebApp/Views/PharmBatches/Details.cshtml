@@ -1,0 +1,246 @@
+﻿@model PAHWebApp.Models.PharmBatch
+
+<div>
+    <h4>PharmBatch</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUserId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MarketId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MarketId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BatchStatusId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BatchStatusId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FileName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FileName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FilePath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FilePath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RangeStartDOS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RangeStartDOS)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RangeEndDOS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RangeEndDOS)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StagingStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StagingStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StagingEndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StagingEndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessUpdateStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BusinessUpdateStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessUpdateEndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BusinessUpdateEndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScrubStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScrubStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScrubEndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScrubEndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StagingClaimCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StagingClaimCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProcessedClaimCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProcessedClaimCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScrubClaimCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScrubClaimCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SubmittedClaimCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SubmittedClaimCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StagingErrorCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StagingErrorCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessUpdateErrorCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BusinessUpdateErrorCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScrubErrorCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScrubErrorCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FileGenerationErrorCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FileGenerationErrorCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPreAdjudicated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsPreAdjudicated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsScrubEnabled)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsScrubEnabled)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PurgeDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PurgeDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BatchMessage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BatchMessage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsFailed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsFailed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsExportComplete)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsExportComplete)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StagingPartitionKey)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StagingPartitionKey)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CachePartitionKey)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CachePartitionKey)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsParsed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsParsed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClmChargeAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClmChargeAmt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClmPatPaidAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClmPatPaidAmt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScrubbedClmChargeAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScrubbedClmChargeAmt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScrubbedClmPatPaidAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScrubbedClmPatPaidAmt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BatchProcessTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BatchProcessTime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.BatchId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

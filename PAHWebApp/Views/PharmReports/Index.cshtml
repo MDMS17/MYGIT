@@ -1,0 +1,80 @@
+﻿@model IEnumerable<ReportViewModel>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <a class="btn btn-block
+       @(Model.FirstOrDefault()==null ? "Scrub":Model.FirstOrDefault().CurrentReportType=="Scrub"? "btn-primary":"btn-default")"
+               asp-action="Index" asp-controller="PharmReports" asp-route-reportType="Scrub" asp-route-reportPage="1">Scrub</a>
+            <br />
+            <a class="btn btn-block
+       @(Model.FirstOrDefault()==null?"Scrub":Model.FirstOrDefault().CurrentReportType == "Reject"? "btn-primary":"btn-default")"
+               asp-action="Index" asp-controller="PharmReports" asp-route-reportType="Reject" asp-route-reportPage="1">Reject</a>
+
+
+        </div>
+        <div class="col-md-9">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            ModifiedUserId
+                        </th>
+                        <th>
+                            ModifiedDateTime
+                        </th>
+                        <th>
+                            BatchId
+                        </th>
+                        <th>
+                            SourceId
+                        </th>
+                        <th>
+                            ClaimId
+                        </th>
+                        <th>
+                            ClaimLineSeq
+                        </th>
+                        <th>
+                            ScrubConfigId
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.FirstOrDefault() != null)
+                    {
+                    @foreach (var item in Model.FirstOrDefault().Reports)
+                    {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedUserId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedDateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BatchId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SourceId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ClaimId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ClaimLineSeq)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScrubConfigId)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ScrubLogId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ScrubLogId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ScrubLogId">Delete</a>
+                    </td>
+                </tr>
+                    }}
+                </tbody>
+            </table>
+        </div>
+    </div>

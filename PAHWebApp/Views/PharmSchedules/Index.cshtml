@@ -1,0 +1,86 @@
+﻿@model ScheduleViewModel
+
+<div class="row">
+    <div class="col-md-3">
+        @await Component.InvokeAsync("NavSchedule")
+        <label>Start Time:</label>
+        <input id="startTime" name="startTime" type="text" value="@DateTime.Today.AddMonths(-6).ToShortDateString()" />
+        <label>End Time:</label>
+        <input id="endTime" name="endTime" type="text" value="@DateTime.Today.ToShortDateString()" />
+    </div>
+    <div class="col-md-9">
+
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        MarketId
+                    </th>
+                    <th>
+                        ScheduleTypeId
+                    </th>
+                    <th>
+                        ScheduleName
+                    </th>
+                    <th>
+                        ScheduleStartDate
+                    </th>
+                    <th>
+                        ScheduleEndDate
+                    </th>
+                    <th>
+                        ScheduleStatusId
+                    </th>
+                    <th>
+                        Count
+                    </th>
+                    <th>
+                        SourceTypeId
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Schedules)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MarketId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScheduleTypeId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScheduleName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScheduleStartDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScheduleEndDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ScheduleStatusId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Count)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SourceTypeId)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ScheduleId">Edit</a> |
+                        <a asp-action="Export" asp-route-id="@item.ScheduleId">Export</a> |
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+        <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+             page-class="btn" page-class-normal="btn-secondary" page-class-selected="btn-primary"
+             page-url-category="@Model.CurrentScheduleStatus" class="btn-group pull-right m-1"></div>
+    </div>
+</div>

@@ -1,0 +1,221 @@
+﻿@model PAHWebApp.Models.PharmBatch
+
+<h4>PharmBatch</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ModifiedUserId" class="control-label"></label>
+                <input asp-for="ModifiedUserId" class="form-control" />
+                <span asp-validation-for="ModifiedUserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModifiedDateTime" class="control-label"></label>
+                <input asp-for="ModifiedDateTime" class="form-control" />
+                <span asp-validation-for="ModifiedDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MarketId" class="control-label"></label>
+                <input asp-for="MarketId" class="form-control" />
+                <span asp-validation-for="MarketId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScheduleId" class="control-label"></label>
+                <input asp-for="ScheduleId" class="form-control" />
+                <span asp-validation-for="ScheduleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BatchStatusId" class="control-label"></label>
+                <input asp-for="BatchStatusId" class="form-control" />
+                <span asp-validation-for="BatchStatusId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FileName" class="control-label"></label>
+                <input asp-for="FileName" class="form-control" />
+                <span asp-validation-for="FileName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilePath" class="control-label"></label>
+                <input asp-for="FilePath" class="form-control" />
+                <span asp-validation-for="FilePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RangeStartDOS" class="control-label"></label>
+                <input asp-for="RangeStartDOS" class="form-control" />
+                <span asp-validation-for="RangeStartDOS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RangeEndDOS" class="control-label"></label>
+                <input asp-for="RangeEndDOS" class="form-control" />
+                <span asp-validation-for="RangeEndDOS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StagingStartDate" class="control-label"></label>
+                <input asp-for="StagingStartDate" class="form-control" />
+                <span asp-validation-for="StagingStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StagingEndDate" class="control-label"></label>
+                <input asp-for="StagingEndDate" class="form-control" />
+                <span asp-validation-for="StagingEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BusinessUpdateStartDate" class="control-label"></label>
+                <input asp-for="BusinessUpdateStartDate" class="form-control" />
+                <span asp-validation-for="BusinessUpdateStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BusinessUpdateEndDate" class="control-label"></label>
+                <input asp-for="BusinessUpdateEndDate" class="form-control" />
+                <span asp-validation-for="BusinessUpdateEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScrubStartDate" class="control-label"></label>
+                <input asp-for="ScrubStartDate" class="form-control" />
+                <span asp-validation-for="ScrubStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScrubEndDate" class="control-label"></label>
+                <input asp-for="ScrubEndDate" class="form-control" />
+                <span asp-validation-for="ScrubEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StagingClaimCount" class="control-label"></label>
+                <input asp-for="StagingClaimCount" class="form-control" />
+                <span asp-validation-for="StagingClaimCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProcessedClaimCount" class="control-label"></label>
+                <input asp-for="ProcessedClaimCount" class="form-control" />
+                <span asp-validation-for="ProcessedClaimCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScrubClaimCount" class="control-label"></label>
+                <input asp-for="ScrubClaimCount" class="form-control" />
+                <span asp-validation-for="ScrubClaimCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubmittedClaimCount" class="control-label"></label>
+                <input asp-for="SubmittedClaimCount" class="form-control" />
+                <span asp-validation-for="SubmittedClaimCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StagingErrorCount" class="control-label"></label>
+                <input asp-for="StagingErrorCount" class="form-control" />
+                <span asp-validation-for="StagingErrorCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BusinessUpdateErrorCount" class="control-label"></label>
+                <input asp-for="BusinessUpdateErrorCount" class="form-control" />
+                <span asp-validation-for="BusinessUpdateErrorCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScrubErrorCount" class="control-label"></label>
+                <input asp-for="ScrubErrorCount" class="form-control" />
+                <span asp-validation-for="ScrubErrorCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FileGenerationErrorCount" class="control-label"></label>
+                <input asp-for="FileGenerationErrorCount" class="form-control" />
+                <span asp-validation-for="FileGenerationErrorCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsPreAdjudicated" /> @Html.DisplayNameFor(model => model.IsPreAdjudicated)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsScrubEnabled" /> @Html.DisplayNameFor(model => model.IsScrubEnabled)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="PurgeDate" class="control-label"></label>
+                <input asp-for="PurgeDate" class="form-control" />
+                <span asp-validation-for="PurgeDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BatchMessage" class="control-label"></label>
+                <input asp-for="BatchMessage" class="form-control" />
+                <span asp-validation-for="BatchMessage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsFailed" /> @Html.DisplayNameFor(model => model.IsFailed)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsExportComplete" class="control-label"></label>
+                <input asp-for="IsExportComplete" class="form-control" />
+                <span asp-validation-for="IsExportComplete" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StagingPartitionKey" class="control-label"></label>
+                <input asp-for="StagingPartitionKey" class="form-control" />
+                <span asp-validation-for="StagingPartitionKey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CachePartitionKey" class="control-label"></label>
+                <input asp-for="CachePartitionKey" class="form-control" />
+                <span asp-validation-for="CachePartitionKey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsParsed" /> @Html.DisplayNameFor(model => model.IsParsed)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClmChargeAmt" class="control-label"></label>
+                <input asp-for="ClmChargeAmt" class="form-control" />
+                <span asp-validation-for="ClmChargeAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClmPatPaidAmt" class="control-label"></label>
+                <input asp-for="ClmPatPaidAmt" class="form-control" />
+                <span asp-validation-for="ClmPatPaidAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScrubbedClmChargeAmt" class="control-label"></label>
+                <input asp-for="ScrubbedClmChargeAmt" class="form-control" />
+                <span asp-validation-for="ScrubbedClmChargeAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScrubbedClmPatPaidAmt" class="control-label"></label>
+                <input asp-for="ScrubbedClmPatPaidAmt" class="form-control" />
+                <span asp-validation-for="ScrubbedClmPatPaidAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BatchProcessTime" class="control-label"></label>
+                <input asp-for="BatchProcessTime" class="form-control" />
+                <span asp-validation-for="BatchProcessTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

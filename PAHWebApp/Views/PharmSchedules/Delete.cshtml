@@ -1,0 +1,123 @@
+﻿@model PAHWebApp.Models.PharmSchedule
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PharmSchedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUserId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MarketId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MarketId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleEndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleEndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FileName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FileName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FilePath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FilePath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPreAdjudicated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsPreAdjudicated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsScrubEnabled)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsScrubEnabled)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleStatusId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleStatusId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Count)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Count)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SourceTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SourceTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsResubmit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsResubmit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsForceVoid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsForceVoid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAutoGenerateFile)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsAutoGenerateFile)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleError)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleError)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ScheduleId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

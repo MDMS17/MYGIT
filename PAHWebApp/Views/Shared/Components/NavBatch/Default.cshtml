@@ -1,0 +1,8 @@
+﻿@model IEnumerable<string>
+
+@foreach (string batchStatus in Model) 
+{
+    <a class="btn btn-block
+       @(batchStatus==ViewBag.SelectedBatchStatus? "btn-primary":"btn-default")"
+       asp-action="Index" asp-controller="PharmBatches" asp-route-batchStatus="@batchStatus" asp-route-batchPage="1">@batchStatus</a>
+}

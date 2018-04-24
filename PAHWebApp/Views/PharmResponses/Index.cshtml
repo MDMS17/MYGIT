@@ -1,0 +1,193 @@
+﻿@model IEnumerable<PAHWebApp.Models.PharmResponse>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedUserId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BatchId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BatchFileStatusId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FileCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FileName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FilePath)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FileCreateDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FormTypeId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ClaimCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalCharge)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalPaid)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FileSubmissionMode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponseFileId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponseFileTypeId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponseFileLoadStatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponseFileLoadDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MarketId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponseFilePath)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponseFileName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponseFileStatusId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InterchangeSenderId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InterchangeDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ErrorFilePath)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ErrorMessage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponseFileSizeInMB)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsDeleted)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsPurge)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ResponseMessage)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BatchId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BatchFileStatusId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileCreateDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FormTypeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClaimCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCharge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileSubmissionMode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseFileId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseFileTypeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseFileLoadStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseFileLoadDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseFilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseFileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseFileStatusId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterchangeSenderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InterchangeDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ErrorFilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ErrorMessage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseFileSizeInMB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPurge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseMessage)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.BatchFileId">Details</a> |
+                <a asp-action="Load" asp-route-id="@item.BatchFileId">Load</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
